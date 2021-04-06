@@ -5,7 +5,8 @@ runs:
   #using: 'alpine' #(Parameter ''using: alpine' is not supported, use 'docker' or 'node12' instead.')
   using: 'docker'
   image: 'docker://alpine:latest'
-  main: 'buildstrap'
+  #main: 'buildstrap' #  Unexpected value 'main'
+  entrypoint: 'pwd && ls -alh && mount'
   
 #  using: "composite"
 #  steps:
