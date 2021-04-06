@@ -15,7 +15,7 @@ runs:
     - 'chmod'
     - '+x'
     - 'buildstrap;'
-    - './buildstrap'
+    - 'echo "::set-output name=bsrun::$(./buildstrap)\n"'
 #    - 'ls'
 #    - '-alh'
 #    - '/github/workspace'
