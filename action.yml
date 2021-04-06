@@ -1,0 +1,11 @@
+name: 'Go BuildStrap'
+description: 'Run series of docker api calls for CICD purposes'
+runs:
+  # test if static binary will load
+  using: 'alpine'
+  main: 'buildstrap'
+  
+  using: "composite"
+  steps:
+    - run: echo "Hi"
+#      shell: bash
