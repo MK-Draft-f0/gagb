@@ -6,7 +6,7 @@ runs:
   using: 'docker'
   image: 'docker://alpine:latest'
   #main: 'buildstrap' #  Unexpected value 'main'
-  entrypoint: '/bin/sh -c'
+  #entrypoint: '/bin/sh -c'
   args:
     - 'ls -alh /github/workspace && ls -alh /github/home'
 
