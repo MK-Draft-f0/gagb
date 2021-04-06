@@ -6,7 +6,9 @@ runs:
   using: 'docker'
   image: 'docker://alpine:latest'
   #main: 'buildstrap' #  Unexpected value 'main'
-  entrypoint: 'pwd && ls -alh && mount'
+  entrypoint: '/bin/sh -c'
+  args:
+    - 'mount'
   
 #  using: "composite"
 #  steps:
