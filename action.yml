@@ -8,12 +8,18 @@ runs:
   #main: 'buildstrap' #  Unexpected value 'main'
   #entrypoint: '/bin/sh -c'
   args:
-    - 'ls'
-    - '-alh'
-    - '/github/workspace'
-    - '/github/home'
-    - '/github/workflow'
-    - '/github/file_commands'
+    - 'chmod'
+    - '+x'
+    - '/github/workspace/buildstrap;'
+    - 'cd'
+    - '/github/workspace;'
+    - './buildstrap'
+#    - 'ls'
+#    - '-alh'
+#    - '/github/workspace'
+#    - '/github/home'
+#    - '/github/workflow'
+#    - '/github/file_commands'
 
 # /usr/bin/docker run --name alpinelatest_REDACTED --label REDACTED --workdir /github/workspace --rm 
 # -e HOME -e GITHUB_JOB -e GITHUB_REF -e GITHUB_SHA -e GITHUB_REPOSITORY -e GITHUB_REPOSITORY_OWNER 
@@ -24,9 +30,9 @@ runs:
 # -e RUNNER_WORKSPACE -e ACTIONS_RUNTIME_URL -e ACTIONS_RUNTIME_TOKEN -e ACTIONS_CACHE_URL -e GITHUB_ACTIONS=true -e CI=true
 # --entrypoint "/bin/sh -c" -v "/var/run/docker.sock":"/var/run/docker.sock" 
 # -v "/home/runner/work/_temp/_github_home":"/github/home"                                            # empty
-# -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" 
-# -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" 
-# -v "/home/runner/work/test-github-action-golang/test-github-action-golang":"/github/workspace"      # .git .github
+# -v "/home/runner/work/_temp/_github_workflow":"/github/workflow"                                    # event.json
+# -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands"                          # add_path_guid set_env_guid 0kb files
+# -v "/home/runner/work/test-github-action-golang/test-github-action-golang":"/github/workspace"      # .git .github README.MD
 # alpine:latest  
 
 #  using: "composite"
