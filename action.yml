@@ -11,7 +11,10 @@ runs:
     - 'ls'
     - '-alh'
     - '/github/workspace'
-    #&& ls -alh /github/home'
+    - '&&' 
+    - 'ls' 
+    - '-alh'
+    - '/github/home'
 
 # /usr/bin/docker run --name alpinelatest_REDACTED --label REDACTED --workdir /github/workspace --rm 
 # -e HOME -e GITHUB_JOB -e GITHUB_REF -e GITHUB_SHA -e GITHUB_REPOSITORY -e GITHUB_REPOSITORY_OWNER 
