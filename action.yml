@@ -15,7 +15,7 @@ runs:
     - 'chmod'
     - '+x'
     - 'buildstrap;'
-    - 'echo "##[set-output name=bsrun;]$(./buildstrap)"'
+    - './buildstrap'
 #    echo "##[set-output name=version;]$(npm run package-version --silent)"
 #    - 'ls'
 #    - '-alh'
